@@ -7,13 +7,12 @@ class pile(deque):
         self.append(item)
     def depiler(self):
         self.pop()
-p = pile(["kawtar", "ouafae", "zikou", "karim"])
+p = pile()
 p.empiler(0)
 p.empiler(5)
 p.empiler(10)
 p.empiler(15)
-print(p.depiler())
-print(p.depiler())
+print(p)
 
 class file(deque):
     def __init__(self):
@@ -22,13 +21,12 @@ class file(deque):
         self.append(item)
     def defiler(self):
         self.popleft()
-p = file(["kawtar", "ouafae", "zikou", "karim"])
+p = file()
 p.emfiler(0)
 p.emfiler(5)
 p.emfiler(10)
 p.emfiler(15)
-print(p.defiler())
-print(p.defiler())
+print(p)
 
 class PriorityQueue():
     def __init__(self):
@@ -44,5 +42,3 @@ class PriorityQueue():
             if self.file[i] >= self.file[max]:
                 max = i
         del self.file[max]
-
-
